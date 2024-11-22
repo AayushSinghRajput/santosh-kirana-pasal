@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANTOSH KIRANA PASAL</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="service.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://media.istockphoto.com/id/1138644570/vector/shopping-cart-icon-design-cart-icon-symbol-design.jpg?s=612x612&w=0&k=20&c=_lTGkSkJ6ha8ZNiKD8XWVtLNyTjQ74HCu_c4WFio27g="
+                    alt="Bootstrap" width="50" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="product.html">Products</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="service.html">Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about.html">AboutUs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search" onsubmit="searchProducts(event)">
+                    <input id="searchInput" class="form-control me-2" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <button id="themeToggle" class="btn btn-outline-dark ms-2" onclick="toggleTheme()">🌙</button>
+                <button class="btn btn-primary">SignUp</button>
+                <button class="btn btn-primary">Login</button>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Home Section  -->
+    <div class="container">
+
+
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/backgroundimage-1.jpeg" class="d-block w-100" alt="..." width="800" height="500">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Essential Groceries</h5>
+                        <p>Find everything you need for your daily meals, from rice and lentils to spices and oils, all
+                            under one roof at affordable prices.</p>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/backgroundimage-2.jpeg" class="d-block w-100" alt="..." width="800" height="500">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Fresh Vegetables Available</h5>
+                        <p>Discover a wide selection of fresh and organic vegetables at our store, picked daily to
+                            ensure
+                            the best quality for your family.</p>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/backgroundimage-3.jpeg" class="d-block w-100" alt="..." width="800" height="500">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Special Discounts on Bulk Items</h5>
+                        <p>Save more with our special discounts on bulk purchases. Stock up on essentials and enjoy the
+                            savings!</p>
+
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- product page  -->
+    <div class="container">
+        <h2>Products</h2>
+        <div id="productList" class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col product" data-name="Rice">
+                <div class="card">
+                    <img src="/assets/rice.jpg" class="card-img-top" alt="Rice">
+                    <div class="card-body">
+                        <h5 class="card-title">Rice</h5>
+                        <p class="card-text">Choose from our selection of high-quality rice, including Basmati, Jeera,
+                            and Mota varieties, perfect for every meal. Whether you're preparing a fragrant biryani or a
+                            simple side dish, our rice offers the ideal taste and texture for any recipe.</p>
+                        <h6>Rate:Rs80/kg</h6>
+                        <div class="quantity-section">
+                            <p>Quantity:
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="increaseQuantity(this)">+</button>
+                                <span class="quantity">1</span>
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="decreaseQuantity(this)">-</button>
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="buynow()">Buy Now</button>
+                        <button type="button" class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col product" data-name="Lentils">
+                <div class="card">
+                    <img src="/assets/Lentils.jpg" class="card-img-top" alt="Lentils">
+                    <div class="card-body">
+                        <h5 class="card-title">Lentils</h5>
+                        <p class="card-text">Our variety of lentils, including red, green, and yellow types, provides a
+                            nutritious base for soups, dals, and salads. Packed with protein and essential nutrients,
+                            our lentils are perfect for balanced, healthy meals for the whole family.</p>
+                        <h6>Rate:Rs50/kg</h6>
+                        <div class="quantity-section">
+                            <p>Quantity:
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="increaseQuantity(this)">+</button>
+                                <span class="quantity">1</span>
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="decreaseQuantity(this)">-</button>
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="buynow()">Buy Now</button>
+                        <button type="button" class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col product" data-name="Flour">
+                <div class="card">
+                    <img src="/assets/flour.jpg" class="card-img-top" alt="Flour">
+                    <div class="card-body">
+                        <h5 class="card-title">Flour</h5>
+                        <p class="card-text">Our selection of fresh flour includes wheat, rice, and gram flour, ideal
+                            for making a variety of breads, rotis, and other homemade delicacies. With fine texture and
+                            quality, our flour is perfect for all your cooking and baking needs.</p>
+                        <h6>Rate:Rs30/kg</h6>
+                        <div class="quantity-section">
+                            <p>Quantity:
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="increaseQuantity(this)">+</button>
+                                <span class="quantity">1</span>
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="decreaseQuantity(this)">-</button>
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="buynow()">Buy Now</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col product" data-name="Cookingoil">
+                <div class="card">
+                    <img src="/assets/cookingoil.jpg" class="card-img-top" alt="Cookingoil">
+                    <div class="card-body">
+                        <h5 class="card-title">Cooking Oil</h5>
+                        <p class="card-text">Choose from our variety of high-quality cooking oils, including sunflower,
+                            mustard, and soybean oil. Perfect for frying, sautéing, or as a dressing, our oils bring
+                            rich flavor and essential nutrients to your daily meals.</p>
+                        <h6>Rate:Rs60/kg</h6>
+                        <div class="quantity-section">
+                            <p>Quantity:
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="increaseQuantity(this)">+</button>
+                                <span class="quantity">1</span>
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="decreaseQuantity(this)">-</button>
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="buynow()">Buy Now</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="addToCart()">Add to Cart</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="productList" class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col product" data-name="Spices">
+                <div class="card">
+                    <img src="/assets/spices.jpeg" class="card-img-top" alt="Spices">
+                    <div class="card-body">
+                        <h5 class="card-title">Spices</h5>
+                        <p class="card-text">Bring rich flavors and aromas to your cooking with our variety of fresh
+                            spices, including turmeric, cumin, coriander, and chili powder. Perfect for enhancing both
+                            traditional and modern dishes, our spices add that extra touch to every meal.</p>
+                        <h6>Rate:Rs20/kg</h6>
+                        <div class="quantity-section">
+                            <p>Quantity:
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="increaseQuantity(this)">+</button>
+                                <span class="quantity">1</span>
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="decreaseQuantity(this)">-</button>
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="buynow()">Buy Now</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="addToCart()">Add to Cart</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col product" data-name="Tea">
+                <div class="card">
+                    <img src="/assets/tea.jpg" class="card-img-top" alt="Tea">
+                    <div class="card-body">
+                        <h5 class="card-title">Tea</h5>
+                        <p class="card-text">Indulge in our selection of premium teas, perfect for a refreshing start to
+                            your day or a relaxing evening. From strong Assam blends to soothing green teas, we offer a
+                            variety of flavors to suit every tea lover's taste.</p>
+                        <h6>Rate:Rs50/kg</h6>
+                        <div class="quantity-section">
+                            <p>Quantity:
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="increaseQuantity(this)">+</button>
+                                <span class="quantity">1</span>
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="decreaseQuantity(this)">-</button>
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="buynow()">Buy Now</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="addToCart()">Add to Cart</button>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col product" data-name="Salt">
+                <div class="card">
+                    <img src="/assets/salt.jpg" class="card-img-top" alt="Salt">
+                    <div class="card-body">
+                        <h5 class="card-title">Salt</h5>
+                        <p class="card-text">An essential ingredient in every kitchen, our high-quality salt adds flavor
+                            to your dishes and brings out the best in every recipe. Available in iodized and rock
+                            varieties, our salt is a must-have for all your cooking needs.</p>
+                        <h6>Rate:Rs10/kg</h6>
+                        <div class="quantity-section">
+                            <p>Quantity:
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="increaseQuantity(this)">+</button>
+                                <span class="quantity">1</span>
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="decreaseQuantity(this)">-</button>
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="buynow()">Buy Now</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="addToCart()">Add to Cart</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col product" data-name="Snacks">
+                <div class="card">
+                    <img src="/assets/snacks.jpeg" class="card-img-top" alt="Snacks">
+                    <div class="card-body">
+                        <h5 class="card-title">Snacks</h5>
+                        <p class="card-text">Satisfy your cravings with our delicious selection of snacks, including
+                            biscuits, chips, namkeen, and sweets. Perfect for tea-time, quick bites, or on-the-go, our
+                            snacks offer something tasty for everyone in the family!</p>
+                        <h6>Rate:Rs70/kg</h6>
+                        <div class="quantity-section">
+                            <p>Quantity:
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="increaseQuantity(this)">+</button>
+                                <span class="quantity">1</span>
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="decreaseQuantity(this)">-</button>
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="buynow()">Buy Now</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="addToCart()">Add to Cart</button>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="productList" class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col product" data-name="Detergent">
+                <div class="card">
+                    <img src="/assets/detergent.jpeg" class="card-img-top" alt="Detergent">
+                    <div class="card-body">
+                        <h5 class="card-title">Detergent</h5>
+                        <p class="card-text">Keep your clothes fresh and clean with our range of detergents, suitable
+                            for all types of fabrics and washing machines. From powder to liquid detergents, our
+                            products are tough on stains yet gentle on fabrics, ensuring a spotless wash every time.</p>
+                        <h6>Rate:Rs90/kg</h6>
+                        <div class="quantity-section">
+                            <p>Quantity:
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="increaseQuantity(this)">+</button>
+                                <span class="quantity">1</span>
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="decreaseQuantity(this)">-</button>
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="buynow()">Buy Now</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="addToCart()">Add to Cart</button>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col product" data-name="Toiletries">
+                <div class="card">
+                    <img src="/assets/toiletries.jpeg" class="card-img-top" alt="Toiletries">
+                    <div class="card-body">
+                        <h5 class="card-title">Toiletries</h5>
+                        <p class="card-text">Our toiletries section offers a wide range of daily essentials, including
+                            soaps, shampoos, toothpaste, and deodorants. Stock up on trusted brands and high-quality
+                            products to keep you and your family feeling fresh, clean, and confident every day.</p>
+                        <h6>Rate:Rs55/kg</h6>
+                        <div class="quantity-section">
+                            <p>Quantity:
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="increaseQuantity(this)">+</button>
+                                <span class="quantity">1</span>
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="decreaseQuantity(this)">-</button>
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="buynow()">Buy Now</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="addToCart()">Add to Cart</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col product" data-name="Pulses">
+                <div class="card">
+                    <img src="/assets/pulses.jpeg" class="card-img-top" alt="Pulses">
+                    <div class="card-body">
+                        <h5 class="card-title">Pulses</h5>
+                        <p class="card-text">Discover our range of fresh and nutritious pulses, including lentils,
+                            chickpeas, beans, and peas. Rich in protein and essential nutrients, our pulses are ideal
+                            for wholesome meals that support a balanced diet. Perfect for dals, soups, and salads!</p>
+                        <h6>Rate:Rs65/kg</h6>
+                        <div class="quantity-section">
+                            <p>Quantity:
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="increaseQuantity(this)">+</button>
+                                <span class="quantity">1</span>
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="decreaseQuantity(this)">-</button>
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="buynow()">Buy Now</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="addToCart()">Add to Cart</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col product" data-name="Vegetable">
+                <div class="card">
+                    <img src="/assets/vegetable.jpeg" class="card-img-top" alt="Vegetable">
+                    <div class="card-body">
+                        <h5 class="card-title">Vegetables</h5>
+                        <p class="card-text">Explore our wide variety of fresh and organic vegetables sourced directly
+                            from local farms. From leafy greens to root vegetables, we provide everything you need to
+                            create healthy and delicious meals for your family. Shop with us for quality you can trust!
+                        </p>
+                        <h6>Rate:Rs65/kg</h6>
+                        <div class="quantity-section">
+                            <p>Quantity:
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="increaseQuantity(this)">+</button>
+                                <span class="quantity">1</span>
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="decreaseQuantity(this)">-</button>
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="buynow()">Buy Now</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="addToCart()">Add to Cart</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- service section  -->
+    <div class="container">
+        <main class="main-content">
+            <section class="services-section">
+                <h2>Our Services</h2>
+                <div class="services-container">
+                    <div class="service-card">
+                        <img src="assets/homedelivery.webp" alt="Home Delivery">
+                        <h3>Home Delivery</h3>
+                        <p>We deliver groceries to your doorstep promptly and efficiently.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="assets/bulk.webp" alt="Bulk Orders">
+                        <h3>Bulk Orders</h3>
+                        <p>Special discounts for bulk orders for parties, events, and businesses.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="assets/vegetable.jpeg" alt="Fresh Produce">
+                        <h3>Fresh Produce</h3>
+                        <p>We provide high-quality fresh vegetables, fruits, and grains.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="inquiry-section">
+                <h2>Inquire About Our Services</h2>
+                <form id="inquiryForm" action="http://localhost:5001/submit-service" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="serviceName" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="serviceEmail" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message:</label>
+                        <textarea id="serviceMessage" name="message" placeholder="Write your inquiry"
+                            required></textarea>
+                    </div>
+                    <button type="submit" id="submitservice">Submit Inquiry</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <!-- About us page  -->
+    <div class="container">
+        <section class="about-us">
+
+            <h2>About Us</h2>
+            <p>Welcome to SANTOSH KIRANA PASAL, your neighborhood Kirana Pasal, dedicated to providing you with
+                high-quality, fresh, and affordable essentials for daily life. Located in the heart of the
+                community, we
+                pride ourselves on offering a wide selection of products, from fresh vegetables, pulses, and spices
+                to
+                cooking oils, snacks, and household items.</p>
+
+            <h3>Our Mission</h3>
+            <p>Our mission is to make shopping simple, convenient, and affordable for every family. We believe that
+                everyone deserves access to fresh and quality products, so we work directly with local farmers and
+                trusted suppliers to ensure that our customers receive only the best. Our friendly staff is always
+                here
+                to help you find what you need, answer your questions, and provide a welcoming shopping experience.
+            </p>
+
+            <h3>Why Choose Us?</h3>
+            <ul>
+                <li><strong>Quality Products:</strong> We source only the finest items to bring you fresh,
+                    nutritious,
+                    and reliable products for every meal.</li>
+                <li><strong>Affordable Prices:</strong> We aim to keep our prices reasonable so you can shop without
+                    compromising on quality.</li>
+                <li><strong>Wide Variety:</strong> From daily essentials to specialty items, we offer a diverse
+                    range of
+                    products to meet your family’s needs.</li>
+                <li><strong>Community Focused:</strong> As a family-owned business, we value our role in the
+                    community
+                    and strive to support local farmers and producers.</li>
+            </ul>
+
+            <h3>Our Commitment</h3>
+            <p>At Santosh Kirana Pasal, we are committed to sustainability and supporting the local economy. By
+                choosing
+                us, you not only get quality products but also help promote a healthy and vibrant community. Thank
+                you
+                for letting us be a part of your daily life, and we look forward to serving you for years to come.
+            </p>
+
+        </section>
+    </div>
+
+    <!-- contact page  -->
+    <div class="container">
+        <section class="contact-us">
+
+            <h2>Contact Us</h2>
+            <p>If you have any questions, concerns, or feedback, we’d love to hear from you! Please feel free to
+                reach
+                out to us using the form below, and we will get back to you as soon as possible.</p>
+
+            <form action="http://localhost:5001/submit-contact" method="POST" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="contactName" name="name" class="form-control"
+                        placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="contactEmail" name="email" class="form-control"
+                        placeholder="Enter your email address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="contactMessage" name="message" class="form-control" rows="4"
+                        placeholder="Write your message here..." required></textarea>
+                </div>
+
+                <button id="submitbutton" type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+
+            <h3>Our Location</h3>
+            <p>Visit us at our store for all your grocery needs:</p>
+            <p><strong>Store Address:</strong> Golbazar-4,Siraha, PostalCode:56500 </p>
+
+            <h3>Follow Us</h3>
+            <p>Stay connected with us on our social media platforms for updates, offers, and more:</p>
+            <ul>
+                <li><a href="https://www.facebook.com/">Facebook</a></li>
+                <li><a href="https://www.instagram.com">Instagram</a></li>
+                <li><a href="https://www.twitter.com">Twitter</a></li>
+            </ul>
+
+        </section>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="container">
+
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Golbazar-4, Siraha, Postal Code: 56500</p>
+                    <p>Email: info@santoshkirana.com</p>
+                    <p>Phone: +977 9800000000</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://www.twitter.com"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Santosh Kirana Pasal. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+<script src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+
+</html>

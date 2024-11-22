@@ -1,0 +1,601 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #343a40;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.navbar-collapse {
+    background-color: #f8f9fa;
+    /* Ensures the dropdown looks consistent */
+}
+
+.navbar .navbar-brand img {
+    width: 50px;
+    /* Set the width of the logo */
+    height: 50px;
+    /* Set the height of the logo */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: red !important;
+    /* White text for nav links */
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    /* Add spacing around the links */
+    margin: 10px 15px;
+    transition: color 0.3s ease-in-out;
+    /* Smooth transition for hover effect */
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #2f4a65 !important;
+    /* Lighter color on hover */
+    background-color: #495057;
+    /* Subtle background color on hover */
+    border-radius: 4px;
+}
+
+.navbar-toggler {
+    border: none;
+    /* Remove default border on the toggle button */
+    background-color: #fff;
+    /* White color for the toggle icon */
+}
+
+.navbar-toggler-icon {
+    background-color: #343a40;
+    /* Dark color for the toggle icon */
+}
+
+.navbar-collapse {
+    justify-content: space-between;
+    /* Space out navbar items */
+}
+
+.form-control {
+    width: 250px;
+    /* Set a fixed width for the search input */
+    border-radius: 4px;
+    /* Round corners for the input field */
+    padding: 8px 15px;
+}
+
+.btn-outline-success {
+    border-radius: 4px;
+    padding: 8px 15px;
+    /* Make the button more padded */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    /* Green background on hover */
+    color: #fff;
+    /* White text on hover */
+}
+
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f4f9;
+}
+
+body.dark-mode .navbar {
+    background-color: #333;
+}
+
+body.dark-mode .navbar .nav-link {
+    color: #121212 !important;
+}
+
+body.dark-mode .navbar .btn-outline-success {
+    color: #f4f4f9;
+    border-color: #f4f4f9;
+}
+
+body.dark-mode .navbar .btn-outline-dark {
+    color: #f4f4f9;
+    border-color: #f4f4f9;
+}
+
+/* Button Styling */
+#themeToggle {
+    transition: background-color 0.3s ease;
+    border-radius: 50%;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+#themeToggle:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Responsive Design for Navbar */
+@media (max-width: 992px) {
+    .navbar .navbar-nav .nav-link {
+        font-size: 1rem;
+        /* Slightly smaller font on smaller screens */
+        padding: 8px 12px;
+    }
+
+    .form-control {
+        width: 200px;
+        /* Smaller search box for smaller screens */
+    }
+
+    .navbar-collapse {
+        text-align: center;
+        /* Center-align items when collapsed */
+    }
+}
+
+/* General Carousel Container */
+.container {
+    margin-top: 20px;
+    /* Adds space on top */
+}
+
+.carousel-caption h5 {
+    color: black;
+}
+
+.carousel-caption p {
+    color: black;
+}
+
+.quantity-section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-section button {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+
+/* General Container */
+.container {
+    margin-top: 40px;
+    padding: 0 15px;
+}
+
+/* Contact Us Section */
+.contact-us {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-us p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Form */
+form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #007bff;
+    /* Blue border on focus */
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Submit Button */
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+/* Location and Social Media */
+h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 40px;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #0056b3;
+    /* Darker blue on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .contact-us {
+        padding: 20px;
+    }
+
+    .contact-us h2 {
+        font-size: 2rem;
+    }
+
+    .contact-us p {
+        font-size: 0.9rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 25px;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    ul li a {
+        font-size: 0.9rem;
+    }
+}
+
+/* General Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* About Us Section */
+.about-us {
+    background-color: #f7f7f7;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.about-us h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Subheadings */
+.about-us h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #007bff;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+/* Why Choose Us Section */
+.about-us ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.about-us ul li {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #333;
+    padding-left: 20px;
+    position: relative;
+}
+
+.about-us ul li:before {
+    content: "•";
+    color: #007bff;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+}
+
+/* Our Commitment Paragraph */
+.about-us p:last-of-type {
+    font-weight: 500;
+    color: #333;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .about-us {
+        padding: 20px;
+    }
+
+    .about-us h2 {
+        font-size: 2rem;
+    }
+
+    .about-us h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-us p,
+    .about-us ul li {
+        font-size: 0.95rem;
+    }
+}
+
+/* Footer General Styling */
+.footer {
+    background-color: #333;
+    color: #f2f2f2;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Footer Section */
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-section p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Footer Links */
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #007bff;
+}
+
+/* Social Icons Styling */
+.social-icons {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-icons li {
+    margin-bottom: 10px;
+}
+
+.social-icons li a {
+    display: flex;
+    align-items: center;
+    color: #ddd;
+    font-size: 0.9rem;
+}
+
+.social-icons li a i {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Row and Card Styling */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.col {
+    flex: 1 1 48%;
+    margin-bottom: 20px;
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Card Body Styling */
+.card-body {
+    padding: 15px;
+    background-color: #fff;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .col {
+        flex: 1 1 100%;
+    }
+}

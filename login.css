@@ -1,0 +1,94 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styling */
+.container {
+    background-color: #ffffff;
+    max-width: 400px;
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Heading */
+.container h2 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Form Labels */
+.form-label {
+    font-weight: 600;
+    color: #444444;
+}
+
+/* Input Fields */
+.form-control {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Help Text */
+.form-text {
+    color: #777777;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .container h2 {
+        font-size: 1.5rem;
+    }
+
+    button[type="submit"] {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+}

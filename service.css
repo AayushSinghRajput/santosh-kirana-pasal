@@ -1,0 +1,340 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+
+.main-content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.services-section,
+.inquiry-section {
+    margin: 20px 0;
+}
+
+.services-section h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.inquiry-section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.inquiry-section form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+
+/* Navbar Styles */
+.navbar {
+    background-color: #343a40;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.navbar .navbar-brand img {
+    width: 50px;
+    /* Set the width of the logo */
+    height: 50px;
+    /* Set the height of the logo */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: red !important;
+    /* White text for nav links */
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    /* Add spacing around the links */
+    margin: 10px 15px;
+    transition: color 0.3s ease-in-out;
+    /* Smooth transition for hover effect */
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #2f4a65 !important;
+    /* Lighter color on hover */
+    background-color: #495057;
+    /* Subtle background color on hover */
+    border-radius: 4px;
+}
+
+.navbar-toggler {
+    border: none;
+    /* Remove default border on the toggle button */
+    background-color: #fff;
+    /* White color for the toggle icon */
+}
+
+.navbar-toggler-icon {
+    background-color: #343a40;
+    /* Dark color for the toggle icon */
+}
+
+.navbar-collapse {
+    justify-content: space-between;
+    /* Space out navbar items */
+}
+
+.form-control {
+    width: 250px;
+    /* Set a fixed width for the search input */
+    border-radius: 4px;
+    /* Round corners for the input field */
+    padding: 8px 15px;
+}
+
+.btn-outline-success {
+    border-radius: 4px;
+    padding: 8px 15px;
+    /* Make the button more padded */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    /* Green background on hover */
+    color: #fff;
+    /* White text on hover */
+}
+
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f4f9;
+}
+
+body.dark-mode .navbar {
+    background-color: #333;
+}
+
+body.dark-mode .navbar .nav-link {
+    color: #121212 !important;
+}
+
+body.dark-mode .navbar .btn-outline-success {
+    color: #f4f4f9;
+    border-color: #f4f4f9;
+}
+
+body.dark-mode .navbar .btn-outline-dark {
+    color: #f4f4f9;
+    border-color: #f4f4f9;
+}
+
+/* Button Styling */
+#themeToggle {
+    transition: background-color 0.3s ease;
+    border-radius: 50%;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+#themeToggle:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Responsive Design for Navbar */
+@media (max-width: 992px) {
+    .navbar .navbar-nav .nav-link {
+        font-size: 1rem;
+        /* Slightly smaller font on smaller screens */
+        padding: 8px 12px;
+    }
+
+    .form-control {
+        width: 200px;
+        /* Smaller search box for smaller screens */
+    }
+
+    .navbar-collapse {
+        text-align: center;
+        /* Center-align items when collapsed */
+    }
+}
+
+
+/* Footer General Styling */
+.footer {
+    background-color: #333;
+    color: #f2f2f2;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Footer Section */
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-section p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Footer Links */
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #007bff;
+}
+
+/* Social Icons Styling */
+.social-icons {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-icons li {
+    margin-bottom: 10px;
+}
+
+.social-icons li a {
+    display: flex;
+    align-items: center;
+    color: #ddd;
+    font-size: 0.9rem;
+}
+
+.social-icons li a i {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
